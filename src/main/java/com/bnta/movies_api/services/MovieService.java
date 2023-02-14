@@ -22,9 +22,8 @@ public class MovieService {
         return movieRepository.findById(id).get();
     }
 
-    //chatGPT did this
-    public Movie addMovie(Movie movie){
-        return movieRepository.save(movie);
+    public Movie createMovie(Movie newMovie){
+        return movieRepository.save(newMovie);
     }
 
 

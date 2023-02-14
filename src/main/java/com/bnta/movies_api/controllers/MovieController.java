@@ -28,10 +28,9 @@ public class MovieController {
         return new ResponseEntity<>(movie, HttpStatus.OK);
     }
 
-    //chatGPT did this
     @PostMapping
     public ResponseEntity<Movie> addMovie(@RequestBody Movie movie) {
-        Movie newMovie = movieService.addMovie(movie);
+        Movie newMovie = movieService.createMovie(movie);
         return new ResponseEntity<>(newMovie, HttpStatus.CREATED);
     }
 
